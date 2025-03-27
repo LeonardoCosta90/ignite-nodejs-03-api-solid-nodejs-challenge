@@ -18,7 +18,6 @@ app.register(fastifyCookie)
 
 app.register(orgsRoutes)
 
-
 app.setErrorHandler((error, _, reply) => {
   if (error instanceof ZodError) {
     return reply
