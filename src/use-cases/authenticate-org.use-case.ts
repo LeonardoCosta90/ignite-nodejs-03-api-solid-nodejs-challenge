@@ -2,7 +2,7 @@ import { Org } from '@prisma/client'
 
 import { OrgsRepository } from '@/repositories/orgs.repository'
 import { InvalidCredentialsError } from '@/use-cases/errors/invalid-credentials.error'
-import { compare } from 'bcrypt'
+import { compare } from 'bcryptjs'
 
 interface AuthenticateOrgUseCaseRequest {
   email: string
