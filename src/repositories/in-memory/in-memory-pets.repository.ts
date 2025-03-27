@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 export class InMemoryPetsRepository implements PetsRepository {
   public items: Pet[] = []
 
-  constructor(private readonly orgsRepository: InMemoryOrgsRepository) {}
+  constructor(private orgsRepository: InMemoryOrgsRepository) {}
 
   async findAll(params: FindAllParams): Promise<Pet[]> {
     const orgsByCity = this.orgsRepository.items.filter(
